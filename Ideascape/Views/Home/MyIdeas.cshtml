@@ -14,9 +14,17 @@
     <div class="row-fluid">
         @foreach (var idea in ideaRow)
         {
-            <div class="span4">@idea.Name</div>
+            <div class="span4" style="padding: 3em">
+                <h4>@idea.Name</h4>
+
+                <p style="background-color: #ffecec">@idea.Premise</p>
+                <p style="background-color: #e3fbe9">@idea.Solution</p>
+                
+                @foreach (var tag in idea.Tags)
+                {
+                    <span class="label">@tag</span>
+                }
+            </div>
         }
     </div>
-    
-    ideaNumber++;
 }
