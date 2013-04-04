@@ -5,16 +5,14 @@
     ViewBag.Title = "My Ideas";
 }
 
-@{
-    var ideas = new IdeaDataStore().Items;
-    var ideaNumber = 0;
-}
+@{ var ideas = new IdeaDataStore().Items; }
 @foreach (var ideaRow in ideas.Split())
 {
     <div class="row-fluid">
         @foreach (var idea in ideaRow)
         {
-            <div class="span4" style="padding: 3em">
+            <div class="span4" style="padding: 1em">
+                <div class="pull-right"><span class="label label-info">@idea.Stage</span></div>
                 <h4>@idea.Name</h4>
 
                 <p style="background-color: #ffecec">@idea.Premise</p>

@@ -10,6 +10,15 @@ namespace Ideascape.Data.Entities
         public string Premise { get; set; }
         public string Solution { get; set; }
         public ICollection<string> Tags { get; set; }
+        public IdeaStage Stage { get; set; }
+
+        public enum IdeaStage
+        {
+            Inception,
+            Expansion,
+            Published,
+            Kickstarted
+        }
     }
 
     public class Participant
