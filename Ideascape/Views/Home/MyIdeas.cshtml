@@ -1,5 +1,22 @@
-﻿@{
+﻿@using Ideascape.Data
+@using Ideascape.Data.Entities
+@using Ideascape.Infrastructure
+@{
     ViewBag.Title = "My Ideas";
 }
 
-Hello
+@{
+    var ideas = new IdeaDataStore().Items;
+    var ideaNumber = 0;
+}
+@foreach (var ideaRow in ideas.Split())
+{
+    <div class="row-fluid">
+        @foreach (var idea in ideaRow)
+        {
+            <div class="span4">@idea.Name</div>
+        }
+    </div>
+    
+    ideaNumber++;
+}
