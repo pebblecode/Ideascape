@@ -1,37 +1,86 @@
 ﻿@using Ideascape.Data
+@using Ideascape.Data.Entities
 @using Ideascape.Infrastructure
 @{
     ViewBag.Title = "My Ideas";
 }
 
-@{ var ideas = new IdeaDataStore().Items; }
+@{
+    var ideas = new IdeaDataStore().Items;
+    var rnd = new Random();
+}
+
+<div class="alert alert-success fade in">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>Congratulations!</strong>
+    The CEO has just this moment <span style="font-size: 110%; font-weight: bold; font-style: italic;">+1'd</span> your idea for
+    <span style="font-weight: bold; font-style: italic;">@ideas.ElementAt(rnd.Next(0, ideas.Count())).Name</span>
+</div>
+
 @foreach (var ideaRow in ideas.Split())
 {
-    <div class="row-fluid">
+    <div class="row-fluid" style="padding: .5em">
         @foreach (var idea in ideaRow)
         {
-            <div class="span4" style="padding: 1em">
-                <div class="pull-right"><span class="label @idea.Stage.ToBootstrapLabelClass()">@((int)idea.Stage + 1). @idea.Stage</span></div>
-                <h4>@idea.Name</h4>
+            <div class="span4" style="margin: .5em; padding: .5em;">
+                <div class="pull-right">
+                    <span class="label @idea.Stage.ToBootstrapLabelClass()">@((int)idea.Stage + 1). @idea.Stage</span>
+                    @if (idea.Stage == Idea.IdeaStage.Inception)
+                    {
+                        <i class="icon-lock" title="Private" style="color: crimson"></i>
+                    }
+                    else
+                    {
+                        <i class="icon-unlock" title="Public"></i>
+                    }
+                </div>
+                <h4>
+                    <span style="font-weight: bold; font-style: italic; color: tomato;">+@(rnd.Next(6, 1622).ToString("N0"))
+                    </span>
+                    &nbsp;&nbsp;
+                    @idea.Name
+                </h4>
 
                 <div class="row-fluid" style="background-color: #ffecec">
-                    <div class="span1" style="margin-left: 7px;background-color: #ffecec">
+                    <div class="span1" style="margin-left: 7px; background-color: #ffecec">
                         <i class="icon-question-sign" style="background-color: #ffecec"></i>
                     </div>
-                    <div style="margin-left: 0;background-color: #ffecec" class="span11"><p>@idea.Premise</p></div>
+                    <div style="margin-left: 0; background-color: #ffecec" class="span11">
+                        <p>@idea.Premise</p>
+                    </div>
                 </div>
-                
+
                 <div class="row-fluid" style="background-color: #e3fbe9; margin-bottom: .5em;">
-                    <div class="span1" style="margin-left: 7px;background-color: #e3fbe9">
+                    <div class="span1" style="margin-left: 7px; background-color: #e3fbe9">
                         <i class="icon-lightbulb" style="background-color: #e3fbe9"></i>
                     </div>
-                    <div style="margin-left: 0;background-color: #e3fbe9" class="span11"><p>@idea.Solution</p></div>
+                    <div style="margin-left: 0; background-color: #e3fbe9" class="span11">
+                        <p>@idea.Solution</p>
+                    </div>
                 </div>
-                
-                @foreach (var tag in idea.Tags)
-                {
-                    <span class="label">@tag</span>
-                }
+
+                <div class="pull-right">
+                    <div class="btn-group">
+                        <button class="btn" style="font-weight: bold; font-style: italic;">+1</button>
+                        <button class="btn dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Comment...</a></li>
+                            <li><a href="#">Refer to colleague...</a></li>
+                            <li><a href="#">Hashtag</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Edit / Remove</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="vertical-align: middle;">
+                    @foreach (var tag in idea.Tags)
+                    {
+                        <span class="label">@tag</span>
+                    }
+                </div>
             </div>
         }
     </div>
