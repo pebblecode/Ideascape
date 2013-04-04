@@ -52,7 +52,8 @@ namespace Ideascape.Controllers
                 {
                     TrendingIdea = ids.Items
                                       .OrderBy(i => Guid.NewGuid())
-                                      .First(i => i.Stage != Idea.IdeaStage.Inception),
+                                      .Where(i => i.Stage != Idea.IdeaStage.Inception)
+                                      .Take(5),
                     TrendingTags = ids.Items
                                       .SelectMany(i => i.Tags).Distinct()
                                       .OrderBy(i => Guid.NewGuid()).Take(5)

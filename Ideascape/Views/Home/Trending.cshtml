@@ -1,6 +1,21 @@
-﻿@model Ideascape.Models.Trending
+﻿@using Ideascape.Infrastructure
+@model Ideascape.Models.Trending
 @{
     ViewBag.Title = "Trending";
+    ViewBag.Random = new Random();
+    ViewBag.IdeaClasStyle = "span10";
 }
 
-Hello
+<div class="row-fluid">
+    <div class="span2" style="background: none">
+        <h3>Trending tags</h3>
+        @foreach (var tag in @Model.TrendingTags)
+        {
+            <span class="label">@tag</span>
+        }
+    </div>
+    @foreach (var idea in @Model.TrendingIdea)
+    {
+        @Html.Partial("_Idea", idea);
+    }
+</div>
