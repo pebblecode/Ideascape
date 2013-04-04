@@ -41,3 +41,6 @@ _ReSharper*/
 [Bb]uild[Ll]og.*
 *.[Pp]ublish.xml
 [Pp]ackages/
+
+# allow nuget folder
+!.nuget/*
