@@ -22,7 +22,7 @@
     <div class="row-fluid" style="padding: .5em">
         @foreach (var idea in ideaRow)
         {
-            <div class="span4" style="margin: .5em; padding: .5em;">
+            <div class="span4" style="margin: .5em; padding: .5em;  background-color: #060606;">
                 <div class="pull-right">
                     <span class="label @idea.Stage.ToBootstrapLabelClass()">@((int)idea.Stage + 1). @idea.Stage</span>
                     @if (idea.Stage == Idea.IdeaStage.Inception)
@@ -41,20 +41,20 @@
                     @idea.Name
                 </h4>
 
-                <div class="row-fluid" style="background-color: #fff9f9; border-radius: 7px;">
-                    <div class="span1" style="margin-left: .5em; background-color: #fff9f9">
-                        <i class="icon-question-sign" style="background-color: #fff9f9"></i>
+                <div class="row-fluid" style="background-color: #0d0d0d; border-radius: 7px;">
+                    <div class="span1" style="margin-left: .5em; background-color: #0d0d0d">
+                        <i class="icon-question-sign" style="background-color: #0d0d0d"></i>
                     </div>
-                    <div style="margin-left: 0; background-color: #fff9f9" class="span11">
+                    <div style="margin-left: 0; background-color: #0d0d0d" class="span11">
                         <p>@idea.Premise</p>
                     </div>
                 </div>
 
-                <div class="row-fluid" style="background-color: #f9fff9; border-radius: 7px; margin-top: .5em; margin-bottom: .5em;">
-                    <div class="span1" style="margin-left: .5em; background-color: #f9fff9">
-                        <i class="icon-lightbulb" style="background-color: #f9fff9"></i>
+                <div class="row-fluid" style="background-color: #0d0d0d; border-radius: 7px; margin-top: .5em; margin-bottom: .5em;">
+                    <div class="span1" style="margin-left: .5em; background-color: #0d0d0d">
+                        <i class="icon-lightbulb" style="background-color: #0d0d0d"></i>
                     </div>
-                    <div style="margin-left: 0; background-color: #f9fff9" class="span11">
+                    <div style="margin-left: 0; background-color: #0d0d0d" class="span11">
                         <p>@idea.Solution</p>
                     </div>
                 </div>
