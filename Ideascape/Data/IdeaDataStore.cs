@@ -30,7 +30,8 @@ namespace Ideascape.Data
         {
             using (var fs = new FileStream(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "ideas.json"), FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None))
             using (var sw = new StreamWriter(fs))
-                new JsonSerializer().Serialize(sw, Items);
+            using (var fw = new JsonTextWriter(sw) { Formatting = Formatting.Indented })
+                new JsonSerializer().Serialize(fw, Items);
         }
     }
 }

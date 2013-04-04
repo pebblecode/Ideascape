@@ -1,1 +1,79 @@
-[{"Id":"511e2edd-6b89-400f-838f-53f31e274b33","Name":"asd","Premise":"asd","Solution":"asd","Tags":["asd","123","zxc"]},{"Id":"511e2edd-6b89-400f-838f-53f31e274b33","Name":"asd","Premise":"asd","Solution":"asd","Tags":["asd","123","zxc"]},{"Id":"511e2edd-6b89-400f-838f-53f31e274b33","Name":"asd","Premise":"asd","Solution":"asd","Tags":["asd","123","zxc"]},{"Id":"511e2edd-6b89-400f-838f-53f31e274b33","Name":"asd","Premise":"asd","Solution":"asd","Tags":["asd","123","zxc"]},{"Id":"511e2edd-6b89-400f-838f-53f31e274b33","Name":"asd","Premise":"asd","Solution":"asd","Tags":["asd","123","zxc"]},{"Id":"511e2edd-6b89-400f-838f-53f31e274b33","Name":"asd","Premise":"asd","Solution":"asd","Tags":["asd","123","zxc"]},{"Id":"511e2edd-6b89-400f-838f-53f31e274b33","Name":"asd","Premise":"asd","Solution":"asd","Tags":["asd","123","zxc"]},{"Id":"55836663-7332-4fc8-af15-6144a8e154d1","Name":"test","Premise":"test","Solution":"test","Tags":["asd","asd"]}]
+[
+  {
+    "Id": "111e2edd-6b89-400f-838f-53f31e274b33",
+    "Name": "Hover boards",
+    "Premise": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+    "Solution": "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+    "Tags": [
+      "technology",
+      "marty-mcfly",
+      "doc-brown"
+    ]
+  },
+  {
+    "Id": "211e2edd-6b89-400f-838f-53f31e274b33",
+    "Name": "Jet packs",
+    "Premise": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
+    "Solution": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
+    "Tags": [
+      "technology",
+      "the-rocketeer",
+      "elton-john"
+    ]
+  },
+  {
+    "Id": "311e2edd-6b89-400f-838f-53f31e274b33",
+    "Name": "Google glass, chinese knockoff clone",
+    "Premise": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.",
+    "Solution": "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.",
+    "Tags": [
+      "technology",
+      "patent-lawsuits",
+      "trolling-the-competition"
+    ]
+  },
+  {
+    "Id": "411e2edd-6b89-400f-838f-53f31e274b33",
+    "Name": "Oyster card chip human implantation",
+    "Premise": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth",
+    "Solution": "Except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee",
+    "Tags": [
+      "cybord-mutants",
+      "tfl",
+      "jedi-oyster-hand"
+    ]
+  },
+  {
+    "Id": "511e2edd-6b89-400f-838f-53f31e274b33",
+    "Name": "Human memory implantation flux capacitor",
+    "Premise": "The European languages are members of the same family. Their separate existence is a myth.",
+    "Solution": "To achieve this, it would be necessary to have uniform grammar, pronunciation and more common ",
+    "Tags": [
+      "doc-brown",
+      "liam-neeson",
+      "total-recall"
+    ]
+  },
+  {
+    "Id": "611e2edd-6b89-400f-838f-53f31e274b33",
+    "Name": "Universal communicator based on subspace networks",
+    "Premise": "Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores.",
+    "Solution": "Ma quande lingues coalesce, li grammatica del resultant lingue es plu simplic e regulari quam ti del coalescent lingues. Li nov lingua franca va esser plu simplic e regulari quam li existent Europan lingues. It va esser tam simplic quam Occidental in fact, it va esser Occidental.",
+    "Tags": [
+      "doc-brown",
+      "liam-neeson",
+      "total-recall"
+    ]
+  },
+  {
+    "Id": "711e2edd-6b89-400f-838f-53f31e274b33",
+    "Name": "True-universal unique identifiers (TUUIDs)",
+    "Premise": "At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.",
+    "Solution": "A un Angleso it va semblar un simplificat Angles, quam un skeptic Cambridge amico dit me que Occidental es. Li Europan lingues es membres",
+    "Tags": [
+      "doc-brown",
+      "liam-neeson",
+      "total-recall"
+    ]
+  }
+]
