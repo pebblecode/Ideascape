@@ -15,7 +15,7 @@ namespace Ideascape.Data
         {
             try
             {
-                using (var fs = new FileStream(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "ideas.json"), FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None))
+                using (var fs = new FileStream(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "ideas.json"), FileMode.OpenOrCreate, FileAccess.Read, FileShare.None))
                 using (var sr = new StreamReader(fs))
                 using (var jr = new JsonTextReader(sr))
                     Items = new JsonSerializer().Deserialize<List<Idea>>(jr) ?? new List<Idea>();
