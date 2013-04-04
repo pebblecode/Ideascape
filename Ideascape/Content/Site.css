@@ -26,3 +26,15 @@ footer {
 body {
     padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 }
+
+.row-fluid [class*="span"] {
+  background-color: #f9f9f9;
+  border-radius: 7px;
+}
+.row-fluid [class*="span"]:hover {
+  background-color: #eee;
+}
+
+.span4 p {
+  border-radius: 7px;
+}
