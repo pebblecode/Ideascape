@@ -11,6 +11,7 @@
         @foreach (var tag in @Model.TrendingTags)
         {
             @Html.ActionLink(tag, "Trending", new { tag }, new{@class="label"})
+            <text>&nbsp;</text>
         }
     </div>
     <div class="span10" style="background: none">
