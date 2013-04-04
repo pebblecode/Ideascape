@@ -14,7 +14,12 @@
     visibility: hidden;
 }
 
+body {
+    height: 100%;
+}
+
 html {
+    height: 100%;
     overflow-y: scroll;
 }
 
@@ -29,13 +34,14 @@ body {
 }
 
 .row-fluid [class*="span"] {
-  background-color: #f9f9f9;
-  border-radius: 7px;
-}
-.row-fluid [class*="span"]:hover {
-  background-color: #eee;
+    background-color: #f9f9f9;
+    border-radius: 7px;
 }
 
+    .row-fluid [class*="span"]:hover {
+        background-color: #eee;
+    }
+
 .span4 p {
-  border-radius: 7px;
+    border-radius: 7px;
 }

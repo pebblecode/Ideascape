@@ -7,7 +7,7 @@
 
 <div class="row-fluid">
     <div class="span2" style="background: none">
-        <h3>Trending tags</h3>
+        <h4>Trending tags</h4>
         @foreach (var tag in @Model.TrendingTags)
         {
             @Html.ActionLink(tag, "Trending", new { tag }, new{@class="label"})
