@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Collections.Generic;
+using System.Reflection;
 using Newtonsoft.Json;
 
 namespace Ideascape.Data
@@ -15,7 +16,8 @@ namespace Ideascape.Data
         {
             try
             {
-                using (var fs = new FileStream(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "ideas.json"), FileMode.OpenOrCreate, FileAccess.Read, FileShare.None))
+                
+                using (var fs = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ideascape.Data.ideas.json"))
                 using (var sr = new StreamReader(fs))
                 using (var jr = new JsonTextReader(sr))
                     Items = new JsonSerializer().Deserialize<List<Idea>>(jr) ?? new List<Idea>();
