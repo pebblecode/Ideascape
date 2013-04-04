@@ -54,8 +54,8 @@ namespace Ideascape.Controllers
                                       .OrderBy(i => Guid.NewGuid())
                                       .First(i => i.Stage != Idea.IdeaStage.Inception),
                     TrendingTags = ids.Items
-                    .SelectMany(i=>i.Tags).Distinct()
-                    .OrderBy(i=>Guid.NewGuid()).Take(5)
+                                      .SelectMany(i => i.Tags).Distinct()
+                                      .OrderBy(i => Guid.NewGuid()).Take(5)
                 };
 
             return View(trending);
