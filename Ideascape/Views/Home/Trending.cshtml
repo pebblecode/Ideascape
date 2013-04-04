@@ -1,5 +1,4 @@
-﻿@using Ideascape.Infrastructure
-@model Ideascape.Models.Trending
+﻿@model Ideascape.Models.Trending
 @{
     ViewBag.Title = "Trending";
     ViewBag.Random = new Random();
@@ -11,11 +10,15 @@
         <h3>Trending tags</h3>
         @foreach (var tag in @Model.TrendingTags)
         {
-            <span class="label">@tag</span>
+            @Html.ActionLink(tag, "Trending", new { tag }, new{@class="label"})
         }
     </div>
-    @foreach (var idea in @Model.TrendingIdea)
-    {
-        @Html.Partial("_Idea", idea);
-    }
+    <div class="span10" style="background: none">
+        @foreach (var idea in @Model.TrendingIdea)
+        {
+            @Html.Partial("_Idea", idea);
+        }
+    </div>
 </div>
+
+

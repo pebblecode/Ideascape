@@ -26,13 +26,13 @@ namespace Ideascape.Controllers
             var ids = new IdeaDataStore();
 
             ids.Items.Add(new Idea
-            {
-                Id = Guid.NewGuid(),
-                Name = model.Name,
-                Premise = model.Premise,
-                Solution = model.Solution,
-                Tags = model.Tags
-            });
+                {
+                    Id = Guid.NewGuid(),
+                    Name = model.Name,
+                    Premise = model.Premise,
+                    Solution = model.Solution,
+                    Tags = model.Tags
+                });
 
             ids.Save();
 
@@ -44,16 +44,24 @@ namespace Ideascape.Controllers
             return View();
         }
 
-        public ActionResult Trending()
+        public ActionResult Trending(string tag)
         {
+            Func<Idea, bool> ideaSelector;
+            if (string.IsNullOrWhiteSpace(tag))
+            {
+                ideaSelector = i => i.Stage != Idea.IdeaStage.Inception;
+            }
+            else
+            {
+                ideaSelector = i => i.Tags.Contains(tag);
+            }
             var ids = new IdeaDataStore();
 
             var trending = new Trending
                 {
                     TrendingIdea = ids.Items
                                       .OrderBy(i => Guid.NewGuid())
-                                      .Where(i => i.Stage != Idea.IdeaStage.Inception)
-                                      .Take(5),
+                                      .Where(ideaSelector).Take(5),
                     TrendingTags = ids.Items
                                       .SelectMany(i => i.Tags).Distinct()
                                       .OrderBy(i => Guid.NewGuid()).Take(5)
@@ -63,3 +71,4 @@ namespace Ideascape.Controllers
         }
     }
 }
+
