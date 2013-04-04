@@ -178,6 +178,7 @@
     <Compile Include="Infrastructure\Class1.cs" />
     <Compile Include="Models\NewIdeaSubmission.cs" />
     <Compile Include="Models\NewIdeaSubmissionBinder.cs" />
+    <Compile Include="Models\Trending.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
