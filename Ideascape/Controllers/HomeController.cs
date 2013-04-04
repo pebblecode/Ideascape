@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace Ideascape.Controllers
@@ -45,7 +46,19 @@ namespace Ideascape.Controllers
 
         public ActionResult Trending()
         {
-            return View();
+            var ids = new IdeaDataStore();
+
+            var trending = new Trending
+                {
+                    TrendingIdea = ids.Items
+                                      .OrderBy(i => Guid.NewGuid())
+                                      .First(i => i.Stage != Idea.IdeaStage.Inception),
+                    TrendingTags = ids.Items
+                                      .SelectMany(i => i.Tags).Distinct()
+                                      .OrderBy(i => Guid.NewGuid()).Take(5)
+                };
+
+            return View(trending);
         }
     }
 }
