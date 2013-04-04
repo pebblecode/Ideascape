@@ -26,7 +26,9 @@ namespace Ideascape
             bundles.Add(new StyleBundle("~/Content/css")
                             .Include("~/Content/bootstrap.css",
                                      "~/Content/bootstrap-padding-top.css",
-                                     "~/Content/bootstrap-responsive.css", "~/Content/site.css"));
+                                     "~/Content/bootstrap-responsive.css",
+                                     "~/Content/font-awesome.css",
+                                     "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
