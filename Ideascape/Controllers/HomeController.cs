@@ -32,7 +32,7 @@ namespace Ideascape.Controllers
                     Tags = model.Tags
                 });
 
-            return View(model);
+            return View("IdeaSubmitted");
         }
 
         public ActionResult MyIdeas()

@@ -61,7 +61,7 @@
     <div style="vertical-align: middle;">
         @foreach (var tag in Model.Tags)
         {
-            @Html.ActionLink(tag, "Trending", new { tag }, new{@class="label"})
+            @Html.ActionLink(tag, "Trending", "Home", new { tag }, new{@class="label"})
             <text>&nbsp;</text>
         }
     </div>

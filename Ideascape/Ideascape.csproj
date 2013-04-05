@@ -289,6 +289,7 @@
     <Content Include="Views\Home\Trending.cshtml" />
     <Content Include="Views\Home\MyIdeas.cshtml" />
     <Content Include="Views\Shared\_Idea.cshtml" />
+    <Content Include="Views\Home\IdeaSubmitted.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
