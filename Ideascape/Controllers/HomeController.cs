@@ -64,6 +64,11 @@ namespace Ideascape.Controllers
 
             return View(trending);
         }
+
+        public ActionResult Timeline()
+        {
+            return View();
+        }
     }
 }
 
