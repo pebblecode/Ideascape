@@ -7,6 +7,7 @@ namespace Ideascape.Data.Entities
     {
         private List<IdeaContribution> _contributions;
 
+        public DateTime Timestamp { get; set; }
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Premise { get; set; }

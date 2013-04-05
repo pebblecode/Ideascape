@@ -168,6 +168,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Bootstrap\Html\MenuExtensions.cs" />
+    <Compile Include="Data\TimelineData.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\Entities\Idea.cs" />
     <Compile Include="Data\IdeaDataStore.cs" />

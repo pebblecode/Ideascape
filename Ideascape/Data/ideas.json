@@ -3,6 +3,7 @@
   "$values": [
     {
       "$type": "Ideascape.Data.Entities.Idea, Ideascape",
+      "Timestamp": "0001-01-01T00:00:00",
       "Id": "111e2edd-6b89-400f-838f-53f31e274b33",
       "Name": "Hover boards",
       "Premise": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
@@ -22,7 +23,7 @@
           {
             "$type": "Ideascape.Data.Entities.IdeaSolution, Ideascape",
             "Solution": "Have you considered first building a time machine and then go stealing Marty McFly's board? Reverse engineer!",
-            "Timestamp": "2013-04-05T12:22:37.5529462+01:00",
+            "Timestamp": "2013-04-01T12:31:35.4249679+01:00",
             "Participant": "Joe Bloggs"
           }
         ]
@@ -30,6 +31,7 @@
     },
     {
       "$type": "Ideascape.Data.Entities.Idea, Ideascape",
+      "Timestamp": "0001-01-01T00:00:00",
       "Id": "211e2edd-6b89-400f-838f-53f31e274b33",
       "Name": "Jet packs",
       "Premise": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.",
@@ -49,26 +51,33 @@
           {
             "$type": "Ideascape.Data.Entities.IdeaSolution, Ideascape",
             "Solution": "Except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences.",
-            "Timestamp": "2013-04-05T12:18:16.4472918+01:00",
+            "Timestamp": "2013-03-28T12:31:35.4269689+01:00",
             "Participant": "Joe Bloggs"
           },
           {
             "$type": "Ideascape.Data.Entities.IdeaSolution, Ideascape",
             "Solution": "I think you should investigate rocket jets.",
-            "Timestamp": "2013-04-05T12:18:16.4472918+01:00",
-            "Participant": "Joe Bloggs"
+            "Timestamp": "2013-04-02T12:31:35.4269689+01:00",
+            "Participant": "Bill Nomates"
           },
           {
             "$type": "Ideascape.Data.Entities.IdeaSolution, Ideascape",
             "Solution": "Have we considered antigravity flux capacitors yet?",
-            "Timestamp": "2013-04-05T12:19:30.975825+01:00",
-            "Participant": "Joe Bloggs"
+            "Timestamp": "2013-04-03T12:31:35.4269689+01:00",
+            "Participant": "Vin Zane"
+          },
+          {
+            "$type": "Ideascape.Data.Entities.IdeaSolution, Ideascape",
+            "Solution": "Didn't they have this tech in StarWars too?",
+            "Timestamp": "2013-04-06T12:35:43.5107408+01:00",
+            "Participant": "Arnold Clark"
           }
         ]
       }
     },
     {
       "$type": "Ideascape.Data.Entities.Idea, Ideascape",
+      "Timestamp": "0001-01-01T00:00:00",
       "Id": "311e2edd-6b89-400f-838f-53f31e274b33",
       "Name": "Google glass, chinese knockoff clone",
       "Premise": "A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.",
@@ -89,6 +98,7 @@
     },
     {
       "$type": "Ideascape.Data.Entities.Idea, Ideascape",
+      "Timestamp": "0001-01-01T00:00:00",
       "Id": "411e2edd-6b89-400f-838f-53f31e274b33",
       "Name": "Oyster card chip human implantation",
       "Premise": "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth",
@@ -109,6 +119,7 @@
     },
     {
       "$type": "Ideascape.Data.Entities.Idea, Ideascape",
+      "Timestamp": "0001-01-01T00:00:00",
       "Id": "511e2edd-6b89-400f-838f-53f31e274b33",
       "Name": "Human memory implantation flux capacitor",
       "Premise": "The European languages are members of the same family. Their separate existence is a myth.",
@@ -129,6 +140,7 @@
     },
     {
       "$type": "Ideascape.Data.Entities.Idea, Ideascape",
+      "Timestamp": "0001-01-01T00:00:00",
       "Id": "611e2edd-6b89-400f-838f-53f31e274b33",
       "Name": "Universal communicator using subspace",
       "Premise": "Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores.",
@@ -149,6 +161,7 @@
     },
     {
       "$type": "Ideascape.Data.Entities.Idea, Ideascape",
+      "Timestamp": "0001-01-01T00:00:00",
       "Id": "711e2edd-6b89-400f-838f-53f31e274b33",
       "Name": "True-universal unique identifiers (TUUIDs)",
       "Premise": "At solmen va esser necessi far uniform grammatica, pronunciation e plu sommun paroles.",
