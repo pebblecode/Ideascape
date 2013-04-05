@@ -1,10 +1,17 @@
-﻿<div id="myCarousel" class="carousel slide" data-interval="false">
+﻿@using Ideascape.Data
+@using Ideascape.Models
+<div id="myCarousel" class="carousel slide" data-interval="false">
     <div class="carousel-inner">
         @Html.Action("HotSeatItemActive")
         @Html.Action("HotSeatItem")
     </div>
-    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    <a class="carousel-control right" style="height: 200px" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
+
+@foreach (var item in IdeaDataStore.Instance.Items)
+{
+    @Html.Partial("_ProposeSolutionModal", new ProposeSolution { IdeaId = item.Id }, new ViewDataDictionary { { "idea", item } })
+}
 
 @section scripts
 {
