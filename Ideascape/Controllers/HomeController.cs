@@ -69,6 +69,30 @@ namespace Ideascape.Controllers
         {
             return View();
         }
+
+        public ActionResult HotSeatItem(string @class = "item")
+        {
+            ViewBag.ItemClass = @class;
+            var hotSeatIdea = new[] {true, false}.OrderBy(i => Guid.NewGuid()).First();
+            if (hotSeatIdea)
+            {
+                return PartialView("_HotseatIdea", IdeaDataStore.Instance.Items.OrderBy(i=>Guid.NewGuid()).First());
+
+            }
+            return PartialView("_HotseatSolution", IdeaDataStore.Instance.Items.OrderBy(i=>Guid.NewGuid()).First());
+        }
+
+        public ActionResult HotSeat()
+        {
+            ViewBag.Title = "Hot Seat";
+
+            return View();
+        }
+
+        public ActionResult HotSeatItemActive()
+        {
+            return HotSeatItem("item active");
+        }
     }
 }
 

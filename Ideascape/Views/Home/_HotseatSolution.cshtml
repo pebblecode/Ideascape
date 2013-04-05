@@ -1,0 +1,9 @@
+﻿@model Ideascape.Data.Entities.Idea
+@{
+    ViewBag.Random = new Random();
+    ViewBag.IdeaClasStyle = "span8";
+}
+
+<div class='@ViewBag.ItemClass'>
+    @Html.Partial("_Idea", @Model)
+</div>

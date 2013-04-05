@@ -291,6 +291,9 @@
     <Content Include="Views\Shared\_Idea.cshtml" />
     <Content Include="Views\Home\IdeaSubmitted.cshtml" />
     <Content Include="Views\Home\Timeline.cshtml" />
+    <Content Include="Views\Home\_HotseatIdea.cshtml" />
+    <Content Include="Views\Home\_HotseatSolution.cshtml" />
+    <Content Include="Views\Home\HotSeat.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

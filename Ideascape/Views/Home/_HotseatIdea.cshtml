@@ -1,0 +1,26 @@
+﻿@model Ideascape.Data.Entities.Idea
+@{
+    ViewBag.Random = new Random();
+    ViewBag.IdeaClasStyle = "span8";
+}
+
+<h2>Any Ideas?</h2>
+
+<div class='@ViewBag.ItemClass'>
+    <p>@Model.Premise</p>
+    
+    @Ajax.BeginForm(new AjaxOptions())
+    {
+        <div class="control-group">
+            @Html.LabelFor(m => m.Solution, new { Class = "control-label" })
+            <div class="controls">
+                @Html.TextAreaFor(m => m.Solution)
+            </div>
+        </div>
+    
+        <div class="form-actions">
+            <button type="submit" class="btn btn-info">Save changes</button>
+            <button type="button" class="btn">Cancel</button>
+        </div>
+    }
+</div>
