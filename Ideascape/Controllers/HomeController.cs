@@ -34,7 +34,7 @@ namespace Ideascape.Controllers
                     Tags = model.Tags
                 });
 
-            ids.Save();
+            //ids.Save();
 
             return View(model);
         }
