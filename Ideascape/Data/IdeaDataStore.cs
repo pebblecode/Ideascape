@@ -17,11 +17,10 @@ namespace Ideascape.Data
         {
             try
             {
-                
                 using (var fs = Assembly.GetExecutingAssembly().GetManifestResourceStream("Ideascape.Data.ideas.json"))
                 using (var sr = new StreamReader(fs))
                 using (var jr = new JsonTextReader(sr))
-                    Items = new JsonSerializer().Deserialize<List<Idea>>(jr) ?? new List<Idea>();
+                    Items = new JsonSerializer { TypeNameHandling = TypeNameHandling.All }.Deserialize<List<Idea>>(jr) ?? new List<Idea>();
             }
             catch
             {
@@ -31,10 +30,12 @@ namespace Ideascape.Data
 
         public void Save()
         {
-            using (var fs = new FileStream(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App_Data", "ideas.json"), FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None))
+#if DEBUG
+            using (var fs = new FileStream(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Data", "ideas.json"), FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None))
             using (var sw = new StreamWriter(fs))
             using (var fw = new JsonTextWriter(sw) { Formatting = Formatting.Indented })
-                new JsonSerializer().Serialize(fw, Items);
+                new JsonSerializer { TypeNameHandling = TypeNameHandling.All }.Serialize(fw, Items);
+#endif
         }
     }
 }

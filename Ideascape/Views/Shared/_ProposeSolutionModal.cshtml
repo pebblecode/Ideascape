@@ -1,0 +1,36 @@
+﻿@using Ideascape.Data.Entities
+@model Ideascape.Models.ProposeSolution
+
+@{
+    var idea = (Idea) ViewData["idea"];
+    Model.IdeaId = idea.Id;
+}
+
+<div id="modal-propose-alt-solution-@idea.Id" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 id="myModalLabel">Propose alternate solution</h4>
+    </div>
+    <div class="modal-body">
+        <p>Enter your proposed solution for <strong><em>@idea.Name</em></strong></p>
+        @using (Html.BeginForm("ProposeSolution", "Home"))
+        {
+            @Html.HiddenFor(x => x.IdeaId)
+            <div class="control-group">
+                @Html.LabelFor(m => m.Solution, new { Class = "control-label" })
+                <div class="controls">
+                    @Html.TextAreaFor(m => m.Solution)
+                </div>
+            </div>
+    
+            <div class="form-actions">
+                <button type="submit" class="btn btn-info">Save changes</button>
+                <button type="button" class="btn">Cancel</button>
+            </div>
+        }
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Having second thoughts</button>
+        <button class="btn btn-primary">Propose solution</button>
+    </div>
+</div>

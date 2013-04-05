@@ -32,6 +32,8 @@ namespace Ideascape.Controllers
                     Tags = model.Tags
                 });
 
+            IdeaDataStore.Instance.Save();
+
             return View("IdeaSubmitted");
         }
 
@@ -68,6 +70,15 @@ namespace Ideascape.Controllers
         public ActionResult Timeline()
         {
             return View();
+        }
+
+        public ActionResult ProposeSolution(ProposeSolution model)
+        {
+            var idea = IdeaDataStore.Instance.Items.Single(i => i.Id == model.IdeaId);
+            idea.Contributions.Add(new IdeaSolution(model.Solution));
+            IdeaDataStore.Instance.Save();
+
+            return View("MyIdeas");
         }
     }
 }

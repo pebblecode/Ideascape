@@ -1,11 +1,12 @@
 ﻿@using Ideascape.Data.Entities
 @using Ideascape.Infrastructure
+@using Ideascape.Models
 @model Idea
 @{
     var rnd = (Random)ViewBag.Random;
 
 }
-<div class="@ViewBag.IdeaClasStyle" style="margin: .5em; padding: .5em;  background-color: #060606;">
+<div class="@ViewBag.IdeaClasStyle" style="margin: .5em; padding: .5em; background-color: #060606;">
     <div class="pull-right">
         <span class="label @Model.Stage.ToBootstrapLabelClass()">@((int)Model.Stage + 1). @Model.Stage</span>
         @if (Model.Stage == Idea.IdeaStage.Inception)
@@ -42,6 +43,19 @@
         </div>
     </div>
 
+    @foreach (var contributedSolution in Model.Contributions.OfType<IdeaSolution>())
+    {
+        <div class="row-fluid" style="background-color: #250000; border-radius: 7px; margin-top: .5em; margin-bottom: .5em;">
+            <div class="span1" style="margin-left: .5em; background-color: #250000">
+                <i class="icon-lightbulb" style="background-color: #250000"></i>
+                <i class="icon-group" style="background-color: #250000"></i>
+            </div>
+            <div style="margin-left: 0; background-color: #250000" class="span11">
+                <p>@contributedSolution.Solution</p>
+            </div>
+        </div>
+    }
+
     <div class="pull-right">
         <div class="btn-group">
             <button class="btn" style="font-weight: bold; font-style: italic;">+1</button>
@@ -50,7 +64,7 @@
             </button>
             <ul class="dropdown-menu">
                 <li><a href="#">Comment...</a></li>
-                <li><a href="#">Refer to colleague...</a></li>
+                <li><a href="#modal-propose-alt-solution-@Model.Id" data-toggle="modal">Propose alternate solution...</a></li>
                 <li><a href="#">Hashtag</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Edit / Remove</a></li>
@@ -61,8 +75,10 @@
     <div style="vertical-align: middle;">
         @foreach (var tag in Model.Tags)
         {
-            @Html.ActionLink(tag, "Trending", "Home", new { tag }, new{@class="label"})
+            @Html.ActionLink(tag, "Trending", "Home", new { tag }, new { @class = "label" })
             <text>&nbsp;</text>
         }
     </div>
 </div>
+
+@Html.Partial("_ProposeSolutionModal", new ProposeSolution { IdeaId = Model.Id }, new ViewDataDictionary { { "idea", Model } })
