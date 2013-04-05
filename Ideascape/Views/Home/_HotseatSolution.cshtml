@@ -1,9 +1,24 @@
-﻿@model Ideascape.Data.Entities.Idea
+﻿@using Ideascape.Models
+@model Ideascape.Data.Entities.Idea
 @{
     ViewBag.Random = new Random();
     ViewBag.IdeaClasStyle = "span8";
 }
 
 <div class='@ViewBag.ItemClass'>
-    @Html.Partial("_Idea", @Model)
+    <h2>Any Ideas?</h2> 
+    <h4>
+        @Model.Name
+    </h4>
+    <div style="background-color: #0d0d0d; border-radius: 7px;">
+        <div class="span1" style="margin-left: .5em; background-color: #0d0d0d">
+            <i class="icon-question-sign" style="background-color: #0d0d0d"></i>
+        </div>
+        <div style="margin-left: 0; background-color: #0d0d0d" class="span10">
+            <p>@Model.Premise</p>
+        </div>
+    </div>
+    <a class="btn" href="#modal-propose-alt-solution-@Model.Id" data-toggle="modal">
+        I have an idea...
+    </a>
 </div>

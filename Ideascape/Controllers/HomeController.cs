@@ -81,6 +81,7 @@ namespace Ideascape.Controllers
 
             return View("MyIdeas");
         }
+
         public ActionResult HotSeatItem(string @class = "item")
         {
             ViewBag.ItemClass = @class;
