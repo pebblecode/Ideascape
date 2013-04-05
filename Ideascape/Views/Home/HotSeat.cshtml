@@ -1,0 +1,25 @@
+﻿<div id="myCarousel" class="carousel slide" data-interval="false">
+    <div class="carousel-inner">
+        @Html.Action("HotSeatItemActive")
+        @Html.Action("HotSeatItem")
+    </div>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('myCarousel').carousel('next');
+        });
+        $('.carousel-control').click(function () {
+            appendItem();
+        });
+        
+        function appendItem() {
+            $.get('/Home/HotSeatItem', function (data) {
+                $('.carousel-inner').append(data);
+            });
+        }
+    </script>
+}

@@ -363,6 +363,9 @@
     <Content Include="Views\Home\Timeline.cshtml" />
     <Content Include="Scripts\TimeLine\data.json" />
     <Content Include="Views\Shared\_ProposeSolutionModal.cshtml" />
+    <Content Include="Views\Home\_HotseatIdea.cshtml" />
+    <Content Include="Views\Home\_HotseatSolution.cshtml" />
+    <Content Include="Views\Home\HotSeat.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
