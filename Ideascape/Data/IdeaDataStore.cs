@@ -10,6 +10,7 @@ namespace Ideascape.Data
 
     public class IdeaDataStore
     {
+        public static IdeaDataStore Instance { get; set; }
         public List<Idea> Items { get; private set; }
 
         public IdeaDataStore()

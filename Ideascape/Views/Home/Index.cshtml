@@ -17,17 +17,17 @@
     <div class="carousel-inner">
         <div class="item active">
             <div style="">
-                @Html.Partial("_Idea", new IdeaDataStore().Items.ElementAt(0))
+                @Html.Partial("_Idea", IdeaDataStore.Instance.Items.ElementAt(0))
             </div>
         </div>
         <div class="item">
             <div style="">
-                @Html.Partial("_Idea", new IdeaDataStore().Items.ElementAt(1))
+                @Html.Partial("_Idea", IdeaDataStore.Instance.Items.ElementAt(1))
             </div>
         </div>
         <div class="item">
             <div style="">
-                @Html.Partial("_Idea", new IdeaDataStore().Items.ElementAt(2))
+                @Html.Partial("_Idea", IdeaDataStore.Instance.Items.ElementAt(2))
             </div>
         </div>
     </div>

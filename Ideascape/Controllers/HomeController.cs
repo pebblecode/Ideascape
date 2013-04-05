@@ -23,9 +23,7 @@ namespace Ideascape.Controllers
         [HttpPost]
         public ActionResult NewIdea(NewIdeaSubmission model)
         {
-            var ids = new IdeaDataStore();
-
-            ids.Items.Add(new Idea
+            IdeaDataStore.Instance.Items.Add(new Idea
                 {
                     Id = Guid.NewGuid(),
                     Name = model.Name,
@@ -33,8 +31,6 @@ namespace Ideascape.Controllers
                     Solution = model.Solution,
                     Tags = model.Tags
                 });
-
-            //ids.Save();
 
             return View(model);
         }
@@ -55,14 +51,13 @@ namespace Ideascape.Controllers
             {
                 ideaSelector = i => i.Tags.Contains(tag);
             }
-            var ids = new IdeaDataStore();
 
             var trending = new Trending
                 {
-                    TrendingIdea = ids.Items
+                    TrendingIdea = IdeaDataStore.Instance.Items
                                       .OrderBy(i => Guid.NewGuid())
                                       .Where(ideaSelector).Take(5),
-                    TrendingTags = ids.Items
+                    TrendingTags = IdeaDataStore.Instance.Items
                                       .SelectMany(i => i.Tags).Distinct()
                                       .OrderBy(i => Guid.NewGuid()).Take(5)
                 };

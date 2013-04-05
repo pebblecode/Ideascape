@@ -6,7 +6,7 @@
 }
 
 @{
-    var ideas = new IdeaDataStore().Items;
+    var ideas = IdeaDataStore.Instance;
     var rnd = new Random();
     ViewBag.Random = rnd;
     ViewBag.IdeaClasStyle = "span4";
